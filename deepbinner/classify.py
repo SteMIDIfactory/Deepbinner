@@ -21,9 +21,20 @@ import sys
 import pathlib
 import h5py
 import numpy as np
+
+""" 
+##IF USING TENSORFLOW V2, PLEASE ACTIVATE THIS BLOCK OF CODE
+from tensorflow.compat.v1.keras.models import load_model
+import tensorflow.compat.v1.keras.backend as backend
+import tensorflow.compat.v1 as tf
+##
+"""
+##IF USING AN EARLIER VERSION OF TENSORFLOW, PLEASE ACTIVATE THIS BLOCK OF CODE
 from keras.models import load_model
 from keras import backend
 import tensorflow as tf
+##
+
 from .load_fast5s import find_all_fast5s, get_read_id_and_signal, determine_single_or_multi_fast5s
 from .trim_signal import normalise
 from .misc import print_summary_table
